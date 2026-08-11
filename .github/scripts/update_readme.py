@@ -347,7 +347,7 @@ def build_readme(profile, repo_count, repos):
         # simple-icons' "medium" glyph is a wordmark that clips inside the badge,
         # so the current three-ellipses Medium logo is inlined as a data URI.
         '  <a href="https://medium.com/@vitorx86">'
-        '<img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80Medium%E2%A0%80-12100E?style=for-the-badge'
+        '<img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80Medium%E2%A0%80-555555?style=for-the-badge'
         "&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAy"
         "NCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMy41NCAxMmE2LjggNi44IDAgMDEtNi43NyA2LjgyQTYuOCA2LjggMCAwMTAgMTJhNi44IDYuOCAw"
         "IDAxNi43Ny02LjgyQTYuOCA2LjggMCAwMTEzLjU0IDEyek0yMC45NiAxMmMwIDMuNTQtMS41MSA2LjQyLTMuMzggNi40Mi0xLjg3IDAtMy4zOS0y"

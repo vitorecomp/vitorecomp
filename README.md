@@ -11,7 +11,7 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | 📦 Repositories | ⭐ Stars | 🍴 Forks | 👥 Followers | 🔀 Pull requests | 🐛 Issues | 🤝 Contributed to |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 89 | 16 | 4 | 18 | 7 | 1 | 0 |
+| 106 | 16 | 5 | 18 | 7 | 5 | 0 |
 
 ## 🗓️ 1074 contributions in the last year
 
@@ -24,14 +24,14 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | Language | Usage | Share |
 | :-- | :-- | --: |
-| Python | `████░░░░░░░░░░░░░░░░` | 22.3% |
+| Python | `████░░░░░░░░░░░░░░░░` | 21.2% |
 | JavaScript | `███░░░░░░░░░░░░░░░░░` | 16.2% |
-| C | `███░░░░░░░░░░░░░░░░░` | 14.2% |
-| HTML | `███░░░░░░░░░░░░░░░░░` | 12.6% |
-| C++ | `██░░░░░░░░░░░░░░░░░░` | 12.0% |
-| Jupyter Notebook | `██░░░░░░░░░░░░░░░░░░` | 7.5% |
-| CSS | `█░░░░░░░░░░░░░░░░░░░` | 4.3% |
-| Java | `█░░░░░░░░░░░░░░░░░░░` | 4.0% |
+| C | `███░░░░░░░░░░░░░░░░░` | 13.3% |
+| C++ | `███░░░░░░░░░░░░░░░░░` | 12.8% |
+| HTML | `██░░░░░░░░░░░░░░░░░░` | 11.9% |
+| Jupyter Notebook | `██░░░░░░░░░░░░░░░░░░` | 7.7% |
+| CSS | `█░░░░░░░░░░░░░░░░░░░` | 4.1% |
+| Java | `█░░░░░░░░░░░░░░░░░░░` | 3.7% |
 
 ## 🧰 Technologies & topics
 
@@ -42,7 +42,7 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 <p align="left">
   <a href="https://www.linkedin.com/in/vieiravitor/"><img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80LinkedIn%E2%A0%80%E2%A0%80-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://www.instagram.com/vitorx86.dev/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="https://medium.com/@vitorx86"><img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80Medium%E2%A0%80-12100E?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMy41NCAxMmE2LjggNi44IDAgMDEtNi43NyA2LjgyQTYuOCA2LjggMCAwMTAgMTJhNi44IDYuOCAwIDAxNi43Ny02LjgyQTYuOCA2LjggMCAwMTEzLjU0IDEyek0yMC45NiAxMmMwIDMuNTQtMS41MSA2LjQyLTMuMzggNi40Mi0xLjg3IDAtMy4zOS0yLjg4LTMuMzktNi40MnMxLjUyLTYuNDIgMy4zOS02LjQyIDMuMzggMi44OCAzLjM4IDYuNDJNMjQgMTJjMCAzLjE3LS41MyA1Ljc1LTEuMTkgNS43NS0uNjYgMC0xLjE5LTIuNTgtMS4xOS01Ljc1cy41My01Ljc1IDEuMTktNS43NVMyNCA4LjgzIDI0IDEyeiIvPjwvc3ZnPg==" alt="Medium"></a>
+  <a href="https://medium.com/@vitorx86"><img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80Medium%E2%A0%80-555555?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMy41NCAxMmE2LjggNi44IDAgMDEtNi43NyA2LjgyQTYuOCA2LjggMCAwMTAgMTJhNi44IDYuOCAwIDAxNi43Ny02LjgyQTYuOCA2LjggMCAwMTEzLjU0IDEyek0yMC45NiAxMmMwIDMuNTQtMS41MSA2LjQyLTMuMzggNi40Mi0xLjg3IDAtMy4zOS0yLjg4LTMuMzktNi40MnMxLjUyLTYuNDIgMy4zOS02LjQyIDMuMzggMi44OCAzLjM4IDYuNDJNMjQgMTJjMCAzLjE3LS41MyA1Ljc1LTEuMTkgNS43NS0uNjYgMC0xLjE5LTIuNTgtMS4xOS01Ljc1cy41My01Ljc1IDEuMTktNS43NVMyNCA4LjgzIDI0IDEyeiIvPjwvc3ZnPg==" alt="Medium"></a>
 </p>
 
 <p align="center">
