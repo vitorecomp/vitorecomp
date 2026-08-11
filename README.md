@@ -1,6 +1,6 @@
 <h1 align="left">Hey, I'm Vitor Vieira</h1>
 
-<p align="center">
+<p align="left">
   Software Engineer @ <a href="https://github.com/google">Google</a> ·
   <a href="https://vitorx86.dev">vitorx86.dev</a>
 </p>
