@@ -40,11 +40,11 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 ## 🌐 Socials
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/vieiravitor/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://www.instagram.com/vitorx86.dev/"><img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="https://medium.com/@vitorx86"><img src="https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white" alt="Medium"></a>
+  <a href="https://www.linkedin.com/in/vieiravitor/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://www.instagram.com/vitorx86.dev/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://medium.com/@vitorx86"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"></a>
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-08-11 01:31 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-08-11 01:37 -03</sub>
 </p>
