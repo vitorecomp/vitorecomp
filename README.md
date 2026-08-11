@@ -7,11 +7,13 @@
 
 Senior Software Engineer and Architect with a proven track record of driving digital transformation for large-scale enterprises. Currently an Engineer at Google, I specialize in scaling cloud-native ecosystems and implementing high-impact AI solutions, such as the integration of core corporate systems with modern GenAI stacks.
 
+<!--
 ## 📊 Overview
 
 | 📦 Repositories | ⭐ Stars | 🍴 Forks | 👥 Followers | 🔀 Pull requests | 🐛 Issues | 🤝 Contributed to |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 89 | 16 | 4 | 18 | 7 | 1 | 0 |
+--> 
 
 ## 🗓️ 1076 contributions in the last year
 
