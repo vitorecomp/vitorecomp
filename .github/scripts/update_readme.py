@@ -8,6 +8,7 @@ token for public data) and writes the full README. Run from the repo root:
 """
 
 import json
+import math
 import os
 import re
 import sys
@@ -23,11 +24,10 @@ LANGUAGES_LIMIT = 8
 TOPICS_LIMIT = 20
 BAR_WIDTH = 20
 
-# Contribution graph geometry (GitHub-style grid).
-CELL = 11
-STEP = CELL + 2
-LEFT = 30   # room for Mon/Wed/Fri labels
-TOP = 18    # room for month labels
+# Contribution graph geometry (isometric 3D towers).
+ISO_A = 10        # half-width of a ground tile
+ISO_SCALE = 0.85  # tile fill ratio; the rest becomes the gap between tiles
+MAX_BAR = 42      # height of the tallest tower
 
 CALENDAR_THEMES = {
     "light": {
@@ -64,7 +64,7 @@ query($login: String!) {
     contributionsCollection {
       contributionCalendar {
         totalContributions
-        weeks { contributionDays { date contributionLevel } }
+        weeks { contributionDays { date contributionCount contributionLevel } }
       }
     }
   }
@@ -131,44 +131,63 @@ def usage_bar(percentage):
     return "█" * filled + "░" * (BAR_WIDTH - filled)
 
 
+def shade(color, factor):
+    channels = (int(color[i:i + 2], 16) for i in (1, 3, 5))
+    return "#" + "".join(f"{round(channel * factor):02x}" for channel in channels)
+
+
+def polygon(points, fill):
+    coords = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+    return f'<polygon points="{coords}" fill="{fill}"/>'
+
+
 def render_calendar_svg(calendar, theme):
-    weeks = calendar["weeks"]
-    text, levels = theme["text"], theme["levels"]
-    width = LEFT + len(weeks) * STEP
-    height = TOP + 7 * STEP
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}" '
-        f'font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" '
-        f'font-size="10">'
-    ]
-
-    # Month labels above the column where a new month starts.
-    previous = None
-    next_free = 0
-    for column, week in enumerate(weeks):
-        month = datetime.fromisoformat(week["contributionDays"][0]["date"]).strftime("%b")
-        if month != previous and column >= next_free and column + 3 <= len(weeks):
-            parts.append(
-                f'<text x="{LEFT + column * STEP}" y="10" fill="{text}">{month}</text>'
-            )
-            next_free = column + 3
-        previous = month
-
-    for day, label in {1: "Mon", 3: "Wed", 5: "Fri"}.items():
-        parts.append(
-            f'<text x="0" y="{TOP + day * STEP + CELL - 2}" fill="{text}">{label}</text>'
-        )
-
-    for column, week in enumerate(weeks):
+    levels = theme["levels"]
+    days = []
+    for column, week in enumerate(calendar["weeks"]):
         for day in week["contributionDays"]:
             # Row from the actual date: the first week can start mid-week.
             row = (datetime.fromisoformat(day["date"]).weekday() + 1) % 7
-            parts.append(
-                f'<rect x="{LEFT + column * STEP}" y="{TOP + row * STEP}" '
-                f'width="{CELL}" height="{CELL}" rx="2" '
-                f'fill="{levels[day["contributionLevel"]]}"/>'
-            )
+            days.append((column, row, day["contributionCount"], day["contributionLevel"]))
+    max_count = max(day[2] for day in days) or 1
+    columns = len(calendar["weeks"])
+
+    a = ISO_A
+    half_w = a * ISO_SCALE      # tile half-width on screen
+    half_h = half_w / 2         # tile half-height on screen
+    pad = 6
+    x0 = -6 * a - half_w - pad
+    x1 = (columns - 1) * a + half_w + pad
+    y0 = -MAX_BAR - half_h - pad
+    y1 = (columns - 1 + 6) * a / 2 + half_h + pad
+    width, height = x1 - x0, y1 - y0
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width:.0f}" height="{height:.0f}" '
+        f'viewBox="{x0:.1f} {y0:.1f} {width:.1f} {height:.1f}">'
+    ]
+
+    # Painter's algorithm: column + row grows toward the viewer.
+    for column, row, count, level in sorted(days, key=lambda day: day[0] + day[1]):
+        x = (column - row) * a
+        y = (column + row) * a / 2
+        top_color = levels[level]
+        if count == 0:
+            parts.append(polygon(
+                [(x, y - half_h), (x + half_w, y), (x, y + half_h), (x - half_w, y)],
+                top_color,
+            ))
+            continue
+        bar = max(3, MAX_BAR * math.sqrt(count / max_count))
+        left, right = (x - half_w, y - bar), (x + half_w, y - bar)
+        back, front = (x, y - bar - half_h), (x, y - bar + half_h)
+        parts.append(polygon(
+            [left, front, (front[0], y + half_h), (left[0], y)], shade(top_color, 0.70)
+        ))
+        parts.append(polygon(
+            [front, right, (right[0], y), (front[0], y + half_h)], shade(top_color, 0.50)
+        ))
+        parts.append(polygon([back, right, front, left], top_color))
 
     parts.append("</svg>")
     return "\n".join(parts)
@@ -319,11 +338,11 @@ def build_readme(profile, repo_count, repos):
         "",
         '<p align="left">',
         '  <a href="https://www.linkedin.com/in/vieiravitor/">'
-        '<img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn"></a>',
+        '<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>',
         '  <a href="https://www.instagram.com/vitorx86.dev/">'
-        '<img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white" alt="Instagram"></a>',
+        '<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>',
         '  <a href="https://medium.com/@vitorx86">'
-        '<img src="https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white" alt="Medium"></a>',
+        '<img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"></a>',
         "</p>",
         "",
         "<p align=\"center\">",
