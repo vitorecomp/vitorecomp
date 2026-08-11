@@ -1,4 +1,4 @@
-<h1 align="center">Hey, I'm Vitor de Araujo 👋</h1>
+<h1 align="center">Hey, I'm Vitor Vieira</h1>
 
 <p align="center">
   Software Engineer @ <a href="https://github.com/google">Google</a> ·
@@ -12,10 +12,6 @@
 <p align="center">
   <img src="metrics.plugin.isocalendar.svg" alt="Isometric commit calendar" width="49%">
   <img src="metrics.plugin.languages.svg" alt="Most used languages" width="49%">
-</p>
-
-<p align="center">
-  <img src="metrics.plugin.habits.svg" alt="Coding habits" width="100%">
 </p>
 
 <p align="center">

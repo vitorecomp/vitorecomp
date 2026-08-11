@@ -1,6 +1,8 @@
 # Renders profile metrics cards with lowlighter/metrics
 # Requires a repository secret named METRICS_TOKEN:
-#   - Classic personal access token (https://github.com/settings/tokens)
+#   - Must be a CLASSIC personal access token (https://github.com/settings/tokens)
+#     Fine-grained tokens are NOT supported by lowlighter/metrics (issue #1292) —
+#     they cause empty repository stats (0 stars/forks/languages).
 #   - No scopes needed for public data (add `repo` if you want private repo stats)
 name: GitHub metrics
 
@@ -52,19 +54,24 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_details: bytes-size, percentage
 
-      - name: Coding habits
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: vitorecomp
-          filename: metrics.plugin.habits.svg
-          base: ""
-          config_timezone: America/Sao_Paulo
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_days: 14
-          plugin_habits_from: 200
+      # Disabled: the habits plugin crashes upstream ("Cannot destructure property
+      # 'author' of 'undefined'") because GitHub's events API no longer always returns
+      # commit payloads. Fix PRs (lowlighter/metrics#1807) are unmerged and the project
+      # is unmaintained. Re-enable if upstream ships a fix, or point `uses:` at a
+      # patched fork.
+      # - name: Coding habits
+      #   uses: lowlighter/metrics@latest
+      #   with:
+      #     token: ${{ secrets.METRICS_TOKEN }}
+      #     user: vitorecomp
+      #     filename: metrics.plugin.habits.svg
+      #     base: ""
+      #     config_timezone: America/Sao_Paulo
+      #     plugin_habits: yes
+      #     plugin_habits_facts: yes
+      #     plugin_habits_charts: yes
+      #     plugin_habits_days: 14
+      #     plugin_habits_from: 200
 
       - name: Mastered technologies
         uses: lowlighter/metrics@latest
