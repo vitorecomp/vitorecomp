@@ -1,4 +1,4 @@
-<h1 align="center">Hey, I'm Vitor Vieira</h1>
+<h1 align="right">Hey, I'm Vitor Vieira</h1>
 
 <p align="center">
   Software Engineer @ <a href="https://github.com/google">Google</a> ·
