@@ -341,8 +341,16 @@ def build_readme(profile, repo_count, repos):
         '<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>',
         '  <a href="https://www.instagram.com/vitorx86.dev/">'
         '<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>',
+        # simple-icons' "medium" glyph is a wordmark that clips inside the badge,
+        # so the current three-ellipses Medium logo is inlined as a data URI.
         '  <a href="https://medium.com/@vitorx86">'
-        '<img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"></a>',
+        '<img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge'
+        "&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAy"
+        "NCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMy41NCAxMmE2LjggNi44IDAgMDEtNi43NyA2LjgyQTYuOCA2LjggMCAwMTAgMTJhNi44IDYuOCAw"
+        "IDAxNi43Ny02LjgyQTYuOCA2LjggMCAwMTEzLjU0IDEyek0yMC45NiAxMmMwIDMuNTQtMS41MSA2LjQyLTMuMzggNi40Mi0xLjg3IDAtMy4zOS0y"
+        "Ljg4LTMuMzktNi40MnMxLjUyLTYuNDIgMy4zOS02LjQyIDMuMzggMi44OCAzLjM4IDYuNDJNMjQgMTJjMCAzLjE3LS41MyA1Ljc1LTEuMTkgNS43"
+        "NS0uNjYgMC0xLjE5LTIuNTgtMS4xOS01Ljc1cy41My01Ljc1IDEuMTktNS43NVMyNCA4LjgzIDI0IDEyeiIvPjwvc3ZnPg=="
+        '" alt="Medium"></a>',
         "</p>",
         "",
         "<p align=\"center\">",
