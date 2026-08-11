@@ -40,11 +40,11 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 ## 🌐 Socials
 
 <p align="left">
-  <a href="https://www.linkedin.com/in/vieiravitor/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://www.linkedin.com/in/vieiravitor/"><img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80LinkedIn%E2%A0%80%E2%A0%80-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://www.instagram.com/vitorx86.dev/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="https://medium.com/@vitorx86"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMy41NCAxMmE2LjggNi44IDAgMDEtNi43NyA2LjgyQTYuOCA2LjggMCAwMTAgMTJhNi44IDYuOCAwIDAxNi43Ny02LjgyQTYuOCA2LjggMCAwMTEzLjU0IDEyek0yMC45NiAxMmMwIDMuNTQtMS41MSA2LjQyLTMuMzggNi40Mi0xLjg3IDAtMy4zOS0yLjg4LTMuMzktNi40MnMxLjUyLTYuNDIgMy4zOS02LjQyIDMuMzggMi44OCAzLjM4IDYuNDJNMjQgMTJjMCAzLjE3LS41MyA1Ljc1LTEuMTkgNS43NS0uNjYgMC0xLjE5LTIuNTgtMS4xOS01Ljc1cy41My01Ljc1IDEuMTktNS43NVMyNCA4LjgzIDI0IDEyeiIvPjwvc3ZnPg==" alt="Medium"></a>
+  <a href="https://medium.com/@vitorx86"><img src="https://img.shields.io/badge/%E2%A0%80%E2%A0%80Medium%E2%A0%80-12100E?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMy41NCAxMmE2LjggNi44IDAgMDEtNi43NyA2LjgyQTYuOCA2LjggMCAwMTAgMTJhNi44IDYuOCAwIDAxNi43Ny02LjgyQTYuOCA2LjggMCAwMTEzLjU0IDEyek0yMC45NiAxMmMwIDMuNTQtMS41MSA2LjQyLTMuMzggNi40Mi0xLjg3IDAtMy4zOS0yLjg4LTMuMzktNi40MnMxLjUyLTYuNDIgMy4zOS02LjQyIDMuMzggMi44OCAzLjM4IDYuNDJNMjQgMTJjMCAzLjE3LS41MyA1Ljc1LTEuMTkgNS43NS0uNjYgMC0xLjE5LTIuNTgtMS4xOS01Ljc1cy41My01Ljc1IDEuMTktNS43NVMyNCA4LjgzIDI0IDEyeiIvPjwvc3ZnPg==" alt="Medium"></a>
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-08-11 01:47 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-08-11 01:49 -03</sub>
 </p>
