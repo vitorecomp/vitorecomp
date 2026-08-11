@@ -4,6 +4,10 @@
 #     Fine-grained tokens are NOT supported by lowlighter/metrics (issue #1292) —
 #     they cause empty repository stats (0 stars/forks/languages).
 #   - No scopes needed for public data (add `repo` if you want private repo stats)
+# `repositories: 40` is required on every step: fetching the default 100 repos in one
+# GraphQL query exceeds GitHub's 10s API timeout for this account (verified empirically:
+# 100/75 always fail, 50/40 succeed), and metrics' batch-halving retry has a control-flow
+# bug that silently loads 0 repositories on first-query failure (empty stats/languages).
 name: GitHub metrics
 
 on:
@@ -26,6 +30,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: vitorecomp
+          repositories: 40
           filename: github-metrics.svg
           base: header, activity, community, repositories, metadata
           config_timezone: America/Sao_Paulo
@@ -36,6 +41,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: vitorecomp
+          repositories: 40
           filename: metrics.plugin.isocalendar.svg
           base: ""
           config_timezone: America/Sao_Paulo
@@ -47,6 +53,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: vitorecomp
+          repositories: 40
           filename: metrics.plugin.languages.svg
           base: ""
           plugin_languages: yes
@@ -78,6 +85,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: vitorecomp
+          repositories: 40
           filename: metrics.plugin.topics.svg
           base: ""
           plugin_topics: yes
