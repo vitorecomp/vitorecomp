@@ -1,14 +1,8 @@
-# Renders profile metrics cards with lowlighter/metrics
-# Requires a repository secret named METRICS_TOKEN:
-#   - Must be a CLASSIC personal access token (https://github.com/settings/tokens)
-#     Fine-grained tokens are NOT supported by lowlighter/metrics (issue #1292) —
-#     they cause empty repository stats (0 stars/forks/languages).
-#   - No scopes needed for public data (add `repo` if you want private repo stats)
-# `repositories: 40` is required on every step: fetching the default 100 repos in one
-# GraphQL query exceeds GitHub's 10s API timeout for this account (verified empirically:
-# 100/75 always fail, 50/40 succeed), and metrics' batch-halving retry has a control-flow
-# bug that silently loads 0 repositories on first-query failure (empty stats/languages).
-name: GitHub metrics
+# Regenerates README.md with GitHub stats as native markdown, plus a
+# self-rendered contribution-graph SVG (light/dark variants).
+# Uses .github/scripts/update_readme.py against the GraphQL API. Public data
+# only needs the default Actions token — no METRICS_TOKEN secret required.
+name: Update README
 
 on:
   schedule:
@@ -16,94 +10,30 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/workflows/metrics.yml"]
+    paths:
+      - ".github/workflows/metrics.yml"
+      - ".github/scripts/update_readme.py"
 
 permissions:
   contents: write
 
 jobs:
-  metrics:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Profile overview
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: vitorecomp
-          repositories: 40
-          filename: github-metrics.svg
-          base: header, activity, community, repositories, metadata
-          config_timezone: America/Sao_Paulo
-          plugin_lines: yes
+      - uses: actions/checkout@v4
 
-      - name: Isometric commit calendar
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: vitorecomp
-          repositories: 40
-          filename: metrics.plugin.isocalendar.svg
-          base: ""
-          config_timezone: America/Sao_Paulo
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+      - name: Generate README
+        run: python3 .github/scripts/update_readme.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Most used languages
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: vitorecomp
-          repositories: 40
-          filename: metrics.plugin.languages.svg
-          base: ""
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_sections: most-used
-          plugin_languages_details: bytes-size, percentage
-
-      # Disabled: the habits plugin crashes upstream ("Cannot destructure property
-      # 'author' of 'undefined'") because GitHub's events API no longer always returns
-      # commit payloads. Fix PRs (lowlighter/metrics#1807) are unmerged and the project
-      # is unmaintained. Re-enable if upstream ships a fix, or point `uses:` at a
-      # patched fork.
-      # - name: Coding habits
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     token: ${{ secrets.METRICS_TOKEN }}
-      #     user: vitorecomp
-      #     filename: metrics.plugin.habits.svg
-      #     base: ""
-      #     config_timezone: America/Sao_Paulo
-      #     plugin_habits: yes
-      #     plugin_habits_facts: yes
-      #     plugin_habits_charts: yes
-      #     plugin_habits_days: 14
-      #     plugin_habits_from: 200
-
-      - name: Mastered technologies
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: vitorecomp
-          repositories: 40
-          filename: metrics.plugin.topics.svg
-          base: ""
-          plugin_topics: yes
-          plugin_topics_mode: mastered
-          plugin_topics_sort: activity
-          plugin_topics_limit: 20
-
-      # Optional: PageSpeed card for vitorx86.dev (like the inspiration screenshot).
-      # Get a free API key at https://developers.google.com/speed/docs/insights/v5/get-started
-      # and save it as the PAGESPEED_TOKEN secret, then uncomment this step.
-      # - name: PageSpeed insights
-      #   uses: lowlighter/metrics@latest
-      #   with:
-      #     token: ${{ secrets.METRICS_TOKEN }}
-      #     user: vitorecomp
-      #     filename: metrics.plugin.pagespeed.svg
-      #     base: ""
-      #     plugin_pagespeed: yes
-      #     plugin_pagespeed_detailed: yes
-      #     plugin_pagespeed_url: https://vitorx86.dev
-      #     plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }}
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md contribution-graph.svg contribution-graph-dark.svg
+          git diff --cached --quiet || {
+            git commit -m "docs: update README metrics - [Skip GitHub Action]"
+            git push
+          }
