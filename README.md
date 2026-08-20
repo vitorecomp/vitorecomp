@@ -11,7 +11,7 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | 📦 Repositories | ⭐ Stars | 🍴 Forks | 👥 Followers | 🔀 Pull requests | 🐛 Issues | 🤝 Contributed to |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 89 | 17 | 4 | 18 | 7 | 1 | 0 |
+| 90 | 17 | 4 | 18 | 7 | 1 | 0 |
 
 ## 🗓️ 1066 contributions in the last year
 
@@ -24,14 +24,14 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | Language | Usage | Share |
 | :-- | :-- | --: |
-| Python | `████░░░░░░░░░░░░░░░░` | 21.8% |
-| JavaScript | `███░░░░░░░░░░░░░░░░░` | 15.8% |
-| C | `███░░░░░░░░░░░░░░░░░` | 13.8% |
-| HTML | `██░░░░░░░░░░░░░░░░░░` | 12.3% |
-| C++ | `██░░░░░░░░░░░░░░░░░░` | 11.7% |
+| Python | `████░░░░░░░░░░░░░░░░` | 21.7% |
+| JavaScript | `███░░░░░░░░░░░░░░░░░` | 15.7% |
+| C | `███░░░░░░░░░░░░░░░░░` | 13.7% |
+| HTML | `██░░░░░░░░░░░░░░░░░░` | 12.2% |
+| C++ | `██░░░░░░░░░░░░░░░░░░` | 11.6% |
 | Jupyter Notebook | `█░░░░░░░░░░░░░░░░░░░` | 7.3% |
 | Java | `█░░░░░░░░░░░░░░░░░░░` | 4.9% |
-| CSS | `█░░░░░░░░░░░░░░░░░░░` | 4.2% |
+| TypeScript | `█░░░░░░░░░░░░░░░░░░░` | 4.2% |
 
 ## 🧰 Technologies & topics
 
@@ -46,5 +46,5 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-08-19 03:27 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-08-20 03:28 -03</sub>
 </p>
