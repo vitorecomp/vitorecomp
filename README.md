@@ -35,7 +35,7 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 ## 🧰 Technologies & topics
 
-`Go` `gemma` `Natural language processing` `deepseek` `system-design` `agent` `skills` `MCP` `Open Source` `Rust` `Computer vision` `OpenCV` `C++` `Robotics` `langchain` `Assembly` `C` `Tensorflow` `Neural Network` `Machine learning`
+`Go` `gemma` `Natural language processing` `deepseek` `system-design` `agent` `skills` `MCP` `Open Source` `Rust` `Computer vision` `OpenCV` `C++` `Robotics` `LangChain` `Assembly` `C` `Tensorflow` `Neural Network` `Machine learning`
 
 ## 🌐 Socials
 
@@ -46,5 +46,5 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-09-04 07:10 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-09-05 06:39 -03</sub>
 </p>
