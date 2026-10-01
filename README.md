@@ -11,7 +11,7 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | 📦 Repositories | ⭐ Stars | 🍴 Forks | 👥 Followers | 🔀 Pull requests | 🐛 Issues | 🤝 Contributed to |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 90 | 17 | 4 | 17 | 7 | 1 | 0 |
+| 90 | 15 | 4 | 17 | 7 | 1 | 0 |
 
 ## 🗓️ 958 contributions in the last year
 
@@ -46,5 +46,5 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-09-30 08:36 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-10-01 09:04 -03</sub>
 </p>
