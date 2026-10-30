@@ -13,7 +13,7 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 93 | 15 | 4 | 17 | 7 | 1 | 0 |
 
-## 🗓️ 830 contributions in the last year
+## 🗓️ 834 contributions in the last year
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="contribution-graph-dark.svg">
@@ -24,10 +24,10 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | Language | Usage | Share |
 | :-- | :-- | --: |
-| Python | `████░░░░░░░░░░░░░░░░` | 22.1% |
-| JavaScript | `███░░░░░░░░░░░░░░░░░` | 15.5% |
+| Python | `████░░░░░░░░░░░░░░░░` | 22.0% |
+| JavaScript | `███░░░░░░░░░░░░░░░░░` | 15.6% |
 | C | `██░░░░░░░░░░░░░░░░░░` | 12.1% |
-| HTML | `██░░░░░░░░░░░░░░░░░░` | 10.8% |
+| HTML | `██░░░░░░░░░░░░░░░░░░` | 10.7% |
 | C++ | `██░░░░░░░░░░░░░░░░░░` | 10.3% |
 | Jupyter Notebook | `█░░░░░░░░░░░░░░░░░░░` | 7.2% |
 | Java | `█░░░░░░░░░░░░░░░░░░░` | 5.5% |
@@ -46,5 +46,5 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-10-29 08:58 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-10-30 08:52 -03</sub>
 </p>
