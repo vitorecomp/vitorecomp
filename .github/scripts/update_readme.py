@@ -143,8 +143,9 @@ def polygon(points, fill):
 
 def render_calendar_svg(calendar, theme):
     levels = theme["levels"]
-    # GitHub returns Sunday-start weeks; re-bucket into Monday-start weeks
-    # (row 0 = Monday ... row 6 = Sunday).
+    # GitHub returns Sunday-start weeks; re-bucket into Monday-start weeks.
+    # Higher rows render further left, so row 6 = Monday (leftmost) ...
+    # row 0 = Sunday (rightmost).
     entries = [
         (date.fromisoformat(day["date"]), day["contributionCount"], day["contributionLevel"])
         for week in calendar["weeks"]
@@ -153,7 +154,7 @@ def render_calendar_svg(calendar, theme):
     first = min(entry[0] for entry in entries)
     first_monday = first - timedelta(days=first.weekday())
     days = [
-        ((day - first_monday).days // 7, day.weekday(), count, level)
+        ((day - first_monday).days // 7, 6 - day.weekday(), count, level)
         for day, count, level in entries
     ]
     max_count = max(day[2] for day in days) or 1
