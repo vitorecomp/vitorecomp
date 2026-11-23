@@ -13,7 +13,7 @@ import os
 import re
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 USER = "vitorecomp"
@@ -143,14 +143,21 @@ def polygon(points, fill):
 
 def render_calendar_svg(calendar, theme):
     levels = theme["levels"]
-    days = []
-    for column, week in enumerate(calendar["weeks"]):
-        for day in week["contributionDays"]:
-            # Row from the actual date: the first week can start mid-week.
-            row = (datetime.fromisoformat(day["date"]).weekday() + 1) % 7
-            days.append((column, row, day["contributionCount"], day["contributionLevel"]))
+    # GitHub returns Sunday-start weeks; re-bucket into Monday-start weeks
+    # (row 0 = Monday ... row 6 = Sunday).
+    entries = [
+        (date.fromisoformat(day["date"]), day["contributionCount"], day["contributionLevel"])
+        for week in calendar["weeks"]
+        for day in week["contributionDays"]
+    ]
+    first = min(entry[0] for entry in entries)
+    first_monday = first - timedelta(days=first.weekday())
+    days = [
+        ((day - first_monday).days // 7, day.weekday(), count, level)
+        for day, count, level in entries
+    ]
     max_count = max(day[2] for day in days) or 1
-    columns = len(calendar["weeks"])
+    columns = max(day[0] for day in days) + 1
 
     a = ISO_A
     half_w = a * ISO_SCALE      # tile half-width on screen
