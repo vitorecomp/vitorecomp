@@ -11,9 +11,9 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | 📦 Repositories | ⭐ Stars | 🍴 Forks | 👥 Followers | 🔀 Pull requests | 🐛 Issues | 🤝 Contributed to |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 94 | 15 | 4 | 17 | 18 | 1 | 0 |
+| 94 | 16 | 4 | 17 | 18 | 1 | 0 |
 
-## 🗓️ 1307 contributions in the last year
+## 🗓️ 1322 contributions in the last year
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="contribution-graph-dark.svg">
@@ -24,14 +24,14 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 
 | Language | Usage | Share |
 | :-- | :-- | --: |
-| Python | `███████░░░░░░░░░░░░░` | 35.2% |
-| TypeScript | `████░░░░░░░░░░░░░░░░` | 18.6% |
-| Jupyter Notebook | `██░░░░░░░░░░░░░░░░░░` | 8.2% |
+| Python | `███████░░░░░░░░░░░░░` | 34.3% |
+| TypeScript | `████░░░░░░░░░░░░░░░░` | 20.4% |
 | JavaScript | `██░░░░░░░░░░░░░░░░░░` | 8.2% |
-| C | `█░░░░░░░░░░░░░░░░░░░` | 5.7% |
-| HTML | `█░░░░░░░░░░░░░░░░░░░` | 5.4% |
-| C++ | `█░░░░░░░░░░░░░░░░░░░` | 4.8% |
-| Rust | `█░░░░░░░░░░░░░░░░░░░` | 3.9% |
+| Jupyter Notebook | `██░░░░░░░░░░░░░░░░░░` | 8.0% |
+| C | `█░░░░░░░░░░░░░░░░░░░` | 5.6% |
+| HTML | `█░░░░░░░░░░░░░░░░░░░` | 5.2% |
+| C++ | `█░░░░░░░░░░░░░░░░░░░` | 4.7% |
+| Rust | `█░░░░░░░░░░░░░░░░░░░` | 3.8% |
 
 ## 🧰 Technologies & topics
 
@@ -46,5 +46,5 @@ Senior Software Engineer and Architect with a proven track record of driving dig
 </p>
 
 <p align="center">
-  <sub>Updated daily by GitHub Actions · last update 2026-11-24 13:43 -03</sub>
+  <sub>Updated daily by GitHub Actions · last update 2026-11-25 13:28 -03</sub>
 </p>
